@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 40px;
+}
+.container{
+    
+}
+
+.header{
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+
+.titulo{
+    font-family: 'Crimson Text', serif;
+    font-weight: 100;
+    font-size: 50px;
+    text-shadow: 0px 3px 5px rgba(95, 95, 95, 0.893);
+}
+
+.parrafo{
+    font-family: 'Raleway', sans-serif;
+}
+.imagenes{
+justify-content: space-around;
+    width: 100%;
+    height: 180px;
+    flex-direction: row;
+   display: flex;
+   flex-wrap: wrap;
+grid-column: 1/5;
+grid-row: 2/3;
+   
+}
+.asidebar > .imagen{
+   
+margin: 10px 10px;
+}
+
+.imagenes > .imagen{
+  margin: 10px
+}
+
+.imagen > img,
+.sidebar > img,
+.footer > img
+{
+    width: 100%;
+}
+
+
+.asidebar{
+    margin-top: 70px;
+    align-items: flex-start;
+   justify-content: center;
+   align-content: space-around;
+    grid-row: 1/-2;
+    grid-column: 5/-1;
+    display: flex;
+   flex-wrap: wrap;
+  
+}
+
+.aside{
+  
+    text-align: center;
+margin-right: 20px;
+
+
+}
+
+.aside> .titulo{
+    text-align: right;
+}
+.container{
+    grid-template-rows: 150px  850px auto ;
+display: grid;
+grid-template-columns: repeat(4, 1fr) 200px;
+}
+.footer{
+grid-row: 3/-1;
+   grid-gap: 20px;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.texto-footer{
+    text-align: center;
+    grid-column: 1/-1;
+}
+
+@media screen and (max-width:1090px){
+
+    .container{
+        grid-template-rows: 150px  1250px auto ;
+    }
+
+   
+}
+@media screen and (max-width:830px){
+
+   .header{
+       text-align: center;
+       grid-column: 1/-1;
+   }
+  .imagenes{
+      grid-column: 1/-1;
+  }
+
+  .asidebar{
+      grid-column: 1/-1;
+      grid-row: 3/4;
+      margin-top: 30px;
+      
+  }
+
+  .aside{
+      margin-left: 300px;
+      margin-right: 300px;
+  }
+
+  .footer{
+      margin-top: 30px;
+      grid-row: 4/-1;
+  }
+  
+ 
+   
+}
+@media screen and (max-width:625px){
+
+    .container{
+        grid-template-rows: 150px 2450px auto  auto;
+      
+    }
+
+   .imagenes{
+       margin-top: 60px;
+   }
+   
+
+   .footer > .img-footer{
+       grid-column: 1/-1;
+   }
+   
+     
+  }
+  
+
+
